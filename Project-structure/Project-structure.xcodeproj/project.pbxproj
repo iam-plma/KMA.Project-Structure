@@ -17,6 +17,13 @@
 		0C47127629AFA0EB00C3EB0A /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47127529AFA0EB00C3EB0A /* StatisticsViewController.swift */; };
 		0C47128429AFAADC00C3EB0A /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47128329AFAADC00C3EB0A /* StoryboardInitializable.swift */; };
 		0C47128A29AFAB1A00C3EB0A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47128929AFAB1A00C3EB0A /* MapViewController.swift */; };
+		0C47128F29B09F6400C3EB0A /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47128E29B09F6400C3EB0A /* MapViewModel.swift */; };
+		0C47129429B0A06D00C3EB0A /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47129329B0A06D00C3EB0A /* MapPoint.swift */; };
+		0C47129829B0A19800C3EB0A /* Coordinates.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C47129729B0A19800C3EB0A /* Coordinates.json */; };
+		0C47129C29B0A50F00C3EB0A /* PointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47129B29B0A50F00C3EB0A /* PointAnnotation.swift */; };
+		0C4712A029B0A51700C3EB0A /* PointAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C47129F29B0A51700C3EB0A /* PointAnnotationView.swift */; };
+		0C4712A329B0A6A900C3EB0A /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4712A229B0A6A900C3EB0A /* UIColor+.swift */; };
+		0C4712A629B0A7F300C3EB0A /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4712A529B0A7F300C3EB0A /* UIViewController+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +39,13 @@
 		0C47127529AFA0EB00C3EB0A /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatisticsViewController.swift; path = "Project-structure/Scenes/StatisticsViewController.swift"; sourceTree = SOURCE_ROOT; };
 		0C47128329AFAADC00C3EB0A /* StoryboardInitializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
 		0C47128929AFAB1A00C3EB0A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0C47128E29B09F6400C3EB0A /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		0C47129329B0A06D00C3EB0A /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
+		0C47129729B0A19800C3EB0A /* Coordinates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Coordinates.json; sourceTree = "<group>"; };
+		0C47129B29B0A50F00C3EB0A /* PointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointAnnotation.swift; sourceTree = "<group>"; };
+		0C47129F29B0A51700C3EB0A /* PointAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointAnnotationView.swift; sourceTree = "<group>"; };
+		0C4712A229B0A6A900C3EB0A /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		0C4712A529B0A7F300C3EB0A /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +78,7 @@
 		0C4711E829AF993A00C3EB0A /* Project-structure */ = {
 			isa = PBXGroup;
 			children = (
+				0C47129229B0A05B00C3EB0A /* Models */,
 				0C47126929AFA02000C3EB0A /* Scenes */,
 				0C47120629AF9A2200C3EB0A /* Utilities */,
 				0C4711FE29AF994600C3EB0A /* App */,
@@ -71,6 +86,7 @@
 				0C4711F229AF993D00C3EB0A /* Assets.xcassets */,
 				0C4711F429AF993D00C3EB0A /* LaunchScreen.storyboard */,
 				0C4711F729AF993D00C3EB0A /* Info.plist */,
+				0C47129729B0A19800C3EB0A /* Coordinates.json */,
 			);
 			path = "Project-structure";
 			sourceTree = "<group>";
@@ -88,6 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				0C47128329AFAADC00C3EB0A /* StoryboardInitializable.swift */,
+				0C4712A229B0A6A900C3EB0A /* UIColor+.swift */,
+				0C4712A529B0A7F300C3EB0A /* UIViewController+.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -130,9 +148,28 @@
 		0C47128829AFAB0D00C3EB0A /* MapScene */ = {
 			isa = PBXGroup;
 			children = (
+				0C47128D29B09E8E00C3EB0A /* Annotation */,
 				0C47128929AFAB1A00C3EB0A /* MapViewController.swift */,
+				0C47128E29B09F6400C3EB0A /* MapViewModel.swift */,
 			);
 			path = MapScene;
+			sourceTree = "<group>";
+		};
+		0C47128D29B09E8E00C3EB0A /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				0C47129B29B0A50F00C3EB0A /* PointAnnotation.swift */,
+				0C47129F29B0A51700C3EB0A /* PointAnnotationView.swift */,
+			);
+			path = Annotation;
+			sourceTree = "<group>";
+		};
+		0C47129229B0A05B00C3EB0A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0C47129329B0A06D00C3EB0A /* MapPoint.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +232,7 @@
 				0C4711F629AF993D00C3EB0A /* LaunchScreen.storyboard in Resources */,
 				0C4711F329AF993D00C3EB0A /* Assets.xcassets in Resources */,
 				0C4711F129AF993A00C3EB0A /* Main.storyboard in Resources */,
+				0C47129829B0A19800C3EB0A /* Coordinates.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,9 +247,15 @@
 				0C47127229AFA0C500C3EB0A /* WalkViewController.swift in Sources */,
 				0C4711EE29AF993A00C3EB0A /* ViewController.swift in Sources */,
 				0C47127629AFA0EB00C3EB0A /* StatisticsViewController.swift in Sources */,
+				0C4712A029B0A51700C3EB0A /* PointAnnotationView.swift in Sources */,
+				0C4712A329B0A6A900C3EB0A /* UIColor+.swift in Sources */,
 				0C4711EA29AF993A00C3EB0A /* AppDelegate.swift in Sources */,
 				0C4711EC29AF993A00C3EB0A /* SceneDelegate.swift in Sources */,
 				0C47128A29AFAB1A00C3EB0A /* MapViewController.swift in Sources */,
+				0C4712A629B0A7F300C3EB0A /* UIViewController+.swift in Sources */,
+				0C47128F29B09F6400C3EB0A /* MapViewModel.swift in Sources */,
+				0C47129429B0A06D00C3EB0A /* MapPoint.swift in Sources */,
+				0C47129C29B0A50F00C3EB0A /* PointAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
