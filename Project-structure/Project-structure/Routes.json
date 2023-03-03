@@ -1,0 +1,30 @@
+{
+    "routes": [
+        {
+            "name": "First walk",
+            "length": 3.7
+            
+        },
+        {
+            "name": "Some walk",
+            "length": 70
+            
+        },
+        {
+            "name": "Nice walk",
+            "length": 25
+            
+        },
+        {
+            "name": "Beautiful walk",
+            "length": 3
+            
+        },
+        {
+            "name": "Short walk",
+            "length": 3.5
+            
+        }
+        
+    ]
+}

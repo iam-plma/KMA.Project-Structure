@@ -26,6 +26,15 @@
 		0C4712A629B0A7F300C3EB0A /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4712A529B0A7F300C3EB0A /* UIViewController+.swift */; };
 		CFADF8AC29B0CDBE00C31606 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFADF8AB29B0CDBE00C31606 /* GoogleService-Info.plist */; };
 		EFAAE68CD323D681A7BB7B97 /* Pods_Project_structure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B5C05CE3621D23EB948F063 /* Pods_Project_structure.framework */; };
+		0C4712CB29B0F20800C3EB0A /* WalkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4712CA29B0F20800C3EB0A /* WalkViewModel.swift */; };
+		0C4712D029B0FBE800C3EB0A /* QuickstartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4712CF29B0FBE800C3EB0A /* QuickstartViewController.swift */; };
+		0C4712D429B0FBF400C3EB0A /* GuidedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4712D329B0FBF400C3EB0A /* GuidedViewController.swift */; };
+		0C4712D829B1138E00C3EB0A /* GuidedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4712D729B1138E00C3EB0A /* GuidedViewModel.swift */; };
+		0C4712DB29B113C300C3EB0A /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4712DA29B113C300C3EB0A /* Route.swift */; };
+		0C4712DE29B113ED00C3EB0A /* Routes.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C4712DD29B113ED00C3EB0A /* Routes.json */; };
+		0C4712E329B1172800C3EB0A /* RouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4712E129B1172800C3EB0A /* RouteTableViewCell.swift */; };
+		0C4712E429B1172800C3EB0A /* RouteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4712E229B1172800C3EB0A /* RouteTableViewCell.xib */; };
+		0C4712E729B119E700C3EB0A /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4712E629B119E700C3EB0A /* UIView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +61,15 @@
 		781D0633D0E10E9396A421CA /* Pods-Project-structure.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project-structure.release.xcconfig"; path = "Target Support Files/Pods-Project-structure/Pods-Project-structure.release.xcconfig"; sourceTree = "<group>"; };
 		858D38B7DA1948C0A5710C6F /* Pods-Project-structure.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project-structure.debug.xcconfig"; path = "Target Support Files/Pods-Project-structure/Pods-Project-structure.debug.xcconfig"; sourceTree = "<group>"; };
 		CFADF8AB29B0CDBE00C31606 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0C4712CA29B0F20800C3EB0A /* WalkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkViewModel.swift; sourceTree = "<group>"; };
+		0C4712CF29B0FBE800C3EB0A /* QuickstartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickstartViewController.swift; sourceTree = "<group>"; };
+		0C4712D329B0FBF400C3EB0A /* GuidedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedViewController.swift; sourceTree = "<group>"; };
+		0C4712D729B1138E00C3EB0A /* GuidedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedViewModel.swift; sourceTree = "<group>"; };
+		0C4712DA29B113C300C3EB0A /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		0C4712DD29B113ED00C3EB0A /* Routes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Routes.json; sourceTree = "<group>"; };
+		0C4712E129B1172800C3EB0A /* RouteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteTableViewCell.swift; sourceTree = "<group>"; };
+		0C4712E229B1172800C3EB0A /* RouteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RouteTableViewCell.xib; sourceTree = "<group>"; };
+		0C4712E629B119E700C3EB0A /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +115,7 @@
 				0C4711F729AF993D00C3EB0A /* Info.plist */,
 				CFADF8AB29B0CDBE00C31606 /* GoogleService-Info.plist */,
 				0C47129729B0A19800C3EB0A /* Coordinates.json */,
+				0C4712DD29B113ED00C3EB0A /* Routes.json */,
 			);
 			path = "Project-structure";
 			sourceTree = "<group>";
@@ -116,6 +135,7 @@
 				0C47128329AFAADC00C3EB0A /* StoryboardInitializable.swift */,
 				0C4712A229B0A6A900C3EB0A /* UIColor+.swift */,
 				0C4712A529B0A7F300C3EB0A /* UIViewController+.swift */,
+				0C4712E629B119E700C3EB0A /* UIView+.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -142,7 +162,10 @@
 		0C47126F29AFA04100C3EB0A /* WalkScene */ = {
 			isa = PBXGroup;
 			children = (
+				0C4712CE29B0FBD900C3EB0A /* Guided */,
+				0C4712CD29B0FBCE00C3EB0A /* Quickstart */,
 				0C47127129AFA0C500C3EB0A /* WalkViewController.swift */,
+				0C4712CA29B0F20800C3EB0A /* WalkViewModel.swift */,
 			);
 			path = WalkScene;
 			sourceTree = "<group>";
@@ -178,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				0C47129329B0A06D00C3EB0A /* MapPoint.swift */,
+				0C4712DA29B113C300C3EB0A /* Route.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,6 +221,31 @@
 				1B5C05CE3621D23EB948F063 /* Pods_Project_structure.framework */,
 			);
 			name = Frameworks;
+		0C4712CD29B0FBCE00C3EB0A /* Quickstart */ = {
+			isa = PBXGroup;
+			children = (
+				0C4712CF29B0FBE800C3EB0A /* QuickstartViewController.swift */,
+			);
+			path = Quickstart;
+			sourceTree = "<group>";
+		};
+		0C4712CE29B0FBD900C3EB0A /* Guided */ = {
+			isa = PBXGroup;
+			children = (
+				0C4712E029B1171100C3EB0A /* TableViewCell */,
+				0C4712D329B0FBF400C3EB0A /* GuidedViewController.swift */,
+				0C4712D729B1138E00C3EB0A /* GuidedViewModel.swift */,
+			);
+			path = Guided;
+			sourceTree = "<group>";
+		};
+		0C4712E029B1171100C3EB0A /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0C4712E129B1172800C3EB0A /* RouteTableViewCell.swift */,
+				0C4712E229B1172800C3EB0A /* RouteTableViewCell.xib */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,9 +310,11 @@
 			files = (
 				CFADF8AC29B0CDBE00C31606 /* GoogleService-Info.plist in Resources */,
 				0C4711F629AF993D00C3EB0A /* LaunchScreen.storyboard in Resources */,
+				0C4712DE29B113ED00C3EB0A /* Routes.json in Resources */,
 				0C4711F329AF993D00C3EB0A /* Assets.xcassets in Resources */,
 				0C4711F129AF993A00C3EB0A /* Main.storyboard in Resources */,
 				0C47129829B0A19800C3EB0A /* Coordinates.json in Resources */,
+				0C4712E429B1172800C3EB0A /* RouteTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,12 +388,19 @@
 			files = (
 				0C47128429AFAADC00C3EB0A /* StoryboardInitializable.swift in Sources */,
 				0C47127229AFA0C500C3EB0A /* WalkViewController.swift in Sources */,
+				0C4712D829B1138E00C3EB0A /* GuidedViewModel.swift in Sources */,
 				0C4711EE29AF993A00C3EB0A /* ViewController.swift in Sources */,
+				0C4712E729B119E700C3EB0A /* UIView+.swift in Sources */,
+				0C4712CB29B0F20800C3EB0A /* WalkViewModel.swift in Sources */,
 				0C47127629AFA0EB00C3EB0A /* StatisticsViewController.swift in Sources */,
 				0C4712A029B0A51700C3EB0A /* PointAnnotationView.swift in Sources */,
+				0C4712D429B0FBF400C3EB0A /* GuidedViewController.swift in Sources */,
 				0C4712A329B0A6A900C3EB0A /* UIColor+.swift in Sources */,
+				0C4712E329B1172800C3EB0A /* RouteTableViewCell.swift in Sources */,
+				0C4712DB29B113C300C3EB0A /* Route.swift in Sources */,
 				0C4711EA29AF993A00C3EB0A /* AppDelegate.swift in Sources */,
 				0C4711EC29AF993A00C3EB0A /* SceneDelegate.swift in Sources */,
+				0C4712D029B0FBE800C3EB0A /* QuickstartViewController.swift in Sources */,
 				0C47128A29AFAB1A00C3EB0A /* MapViewController.swift in Sources */,
 				0C4712A629B0A7F300C3EB0A /* UIViewController+.swift in Sources */,
 				0C47128F29B09F6400C3EB0A /* MapViewModel.swift in Sources */,

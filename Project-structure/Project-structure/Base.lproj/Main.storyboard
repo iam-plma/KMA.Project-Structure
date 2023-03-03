@@ -17,8 +17,78 @@
                     <view key="view" contentMode="scaleToFill" id="Zkb-jV-FGi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qra-gM-zCi">
+                                <rect key="frame" x="0.0" y="100" width="414" height="713"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0U-aF-RpC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMo-Rb-EGI">
+                                        <rect key="frame" x="10" y="30" width="80" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="8un-Zo-WDE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="uMo-Rb-EGI" secondAttribute="bottom" constant="10" id="JDy-YW-ks7"/>
+                                    <constraint firstItem="uMo-Rb-EGI" firstAttribute="top" secondItem="L0U-aF-RpC" secondAttribute="top" constant="30" id="bp5-1j-v7U"/>
+                                    <constraint firstItem="uMo-Rb-EGI" firstAttribute="leading" secondItem="L0U-aF-RpC" secondAttribute="leading" constant="10" id="qqn-dz-Kow"/>
+                                    <constraint firstAttribute="height" constant="100" id="xI5-9G-WN3"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="s89-Rc-3y4">
+                                <rect key="frame" x="20" y="100" width="374" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfP-TW-KSZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Quickstart">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="quickStart:" destination="MSM-oa-hXB" eventType="touchUpInside" id="j9y-DI-nul"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vR7-1Q-jUs">
+                                        <rect key="frame" x="187" y="0.0" width="187" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Guided">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guided:" destination="MSM-oa-hXB" eventType="touchUpInside" id="JQl-1K-vSq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bqh-sh-fll"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="tcM-nB-dhQ"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qra-gM-zCi" firstAttribute="leading" secondItem="tcM-nB-dhQ" secondAttribute="leading" id="ANb-sn-vvb"/>
+                            <constraint firstItem="L0U-aF-RpC" firstAttribute="top" secondItem="Zkb-jV-FGi" secondAttribute="top" id="Beu-WV-DYU"/>
+                            <constraint firstItem="s89-Rc-3y4" firstAttribute="leading" secondItem="tcM-nB-dhQ" secondAttribute="leading" constant="20" id="HRW-fW-AEn"/>
+                            <constraint firstItem="s89-Rc-3y4" firstAttribute="top" secondItem="L0U-aF-RpC" secondAttribute="bottom" id="LFS-2K-XRf"/>
+                            <constraint firstItem="tcM-nB-dhQ" firstAttribute="trailing" secondItem="s89-Rc-3y4" secondAttribute="trailing" constant="20" id="Lbk-9V-eWq"/>
+                            <constraint firstItem="tcM-nB-dhQ" firstAttribute="trailing" secondItem="L0U-aF-RpC" secondAttribute="trailing" id="Ql1-JC-CsC"/>
+                            <constraint firstItem="L0U-aF-RpC" firstAttribute="leading" secondItem="tcM-nB-dhQ" secondAttribute="leading" id="Tw2-O0-gVI"/>
+                            <constraint firstItem="tcM-nB-dhQ" firstAttribute="bottom" secondItem="Qra-gM-zCi" secondAttribute="bottom" id="aU9-hK-w5X"/>
+                            <constraint firstItem="tcM-nB-dhQ" firstAttribute="trailing" secondItem="Qra-gM-zCi" secondAttribute="trailing" id="ltH-LF-lD1"/>
+                            <constraint firstItem="Qra-gM-zCi" firstAttribute="top" secondItem="L0U-aF-RpC" secondAttribute="bottom" id="qel-sE-ml6"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="WalkSelected" id="ECv-KQ-iTf">
                         <inset key="imageInsets" minX="0.0" minY="-50" maxX="0.0" maxY="0.0"/>
@@ -26,6 +96,14 @@
                         <color key="badgeColor" systemColor="labelColor"/>
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="10"/>
                     </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="ECv-KQ-iTf"/>
+                    <connections>
+                        <outlet property="container" destination="Qra-gM-zCi" id="JE4-qj-2b7"/>
+                        <outlet property="guidedButton" destination="vR7-1Q-jUs" id="pa2-th-cZQ"/>
+                        <outlet property="quickStartButton" destination="cfP-TW-KSZ" id="x2m-2M-InM"/>
+                        <outlet property="topLabel" destination="uMo-Rb-EGI" id="hr4-HL-k6L"/>
+                        <outlet property="topView" destination="L0U-aF-RpC" id="3nh-mL-9tw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wz2-9j-F8M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -109,6 +187,8 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
