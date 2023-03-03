@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "image 5.png",
+      "filename" : "Ellipse2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "image5.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "image5 1.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
