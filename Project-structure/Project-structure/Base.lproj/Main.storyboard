@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vs2-l6-dbC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vs2-l6-dbC">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Walk View Controller-->
         <scene sceneID="XyJ-BI-DxB">
             <objects>
                 <viewController id="MSM-oa-hXB" customClass="WalkViewController" customModule="Project_structure" customModuleProvider="target" sceneMemberID="viewController">
@@ -88,7 +90,9 @@
                             <constraint firstItem="Qra-gM-zCi" firstAttribute="top" secondItem="L0U-aF-RpC" secondAttribute="bottom" id="qel-sE-ml6"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="ECv-KQ-iTf"/>
+                    <tabBarItem key="tabBarItem" title="" image="Run" id="ECv-KQ-iTf">
+                        <inset key="imageInsets" minX="0.0" minY="-40" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="container" destination="Qra-gM-zCi" id="JE4-qj-2b7"/>
                         <outlet property="guidedButton" destination="vR7-1Q-jUs" id="pa2-th-cZQ"/>
@@ -101,7 +105,7 @@
             </objects>
             <point key="canvasLocation" x="-1942" y="56"/>
         </scene>
-        <!--Item-->
+        <!--Statistics View Controller-->
         <scene sceneID="WG8-fb-DLo">
             <objects>
                 <viewController id="ffV-Of-yRb" customClass="StatisticsViewController" customModule="Project_structure" customModuleProvider="target" sceneMemberID="viewController">
@@ -111,14 +115,14 @@
                         <viewLayoutGuide key="safeArea" id="8Mg-0h-vuI"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="XXx-m2-eqj"/>
+                    <tabBarItem key="tabBarItem" title="" image="Statistic" selectedImage="StatisticSelected2" id="XXx-m2-eqj"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f9i-vj-6GL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1083" y="56"/>
         </scene>
-        <!--Item 1-->
+        <!--Map View Controller-->
         <scene sceneID="SmQ-1H-HAr">
             <objects>
                 <viewController id="lsE-CZ-JRj" customClass="MapViewController" customModule="Project_structure" customModuleProvider="target" sceneMemberID="viewController">
@@ -128,7 +132,7 @@
                         <viewLayoutGuide key="safeArea" id="kM7-Xf-jvN"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Ann-Al-Ckh"/>
+                    <tabBarItem key="tabBarItem" title="" image="PointAnnotation" selectedImage="PointSelected" id="Ann-Al-Ckh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdY-IO-lbc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -138,10 +142,17 @@
         <scene sceneID="A6D-K8-Bhr">
             <objects>
                 <tabBarController storyboardIdentifier="ViewController" id="Vs2-l6-dbC" customClass="ViewController" customModule="Project_structure" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A55-UR-BxL">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" itemPositioning="fill" id="A55-UR-BxL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="Color"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="lsE-CZ-JRj" kind="relationship" relationship="viewControllers" id="Zxh-Wa-JWo"/>
@@ -155,6 +166,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="PointAnnotation" width="30" height="30"/>
+        <image name="PointSelected" width="35" height="37"/>
+        <image name="Run" width="80" height="80"/>
+        <image name="Statistic" width="26" height="30"/>
+        <image name="StatisticSelected2" width="35" height="38"/>
+        <namedColor name="Color">
+            <color red="0.83529411764705885" green="0.96078431372549022" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

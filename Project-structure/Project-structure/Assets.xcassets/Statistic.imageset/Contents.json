@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "image 5.png",
+      "filename" : "Statistic.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Point.png",
+      "filename" : "Statistic2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Point3.png",
+      "filename" : "Statistic3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
