@@ -16,8 +16,13 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViewModel()
         setupMap()
         addGestureRecognizer()
+    }
+    
+    private func setupViewModel() {
+        viewModel.delegate = self
     }
     
     private func addGestureRecognizer() {
@@ -32,10 +37,7 @@ class MapViewController: UIViewController {
         mapView.register(PointAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         mapView.register(ClusterAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
         
-        viewModel.points.forEach({ point in
-            mapView.addAnnotation(PointAnnotation(lat: point.lat, lon: point.lon, val: point.val))
-            
-        })
+        updateAnnotations()
     }
     
     @objc
@@ -64,6 +66,12 @@ class MapViewController: UIViewController {
                                 })
         }
     }
+    
+    private func updateAnnotations() {
+        viewModel.points.forEach({ point in
+            mapView.addAnnotation(PointAnnotation(lat: point.lat, lon: point.lon, val: point.val))
+        })
+    }
 }
 
 extension MapViewController: UITextFieldDelegate {
@@ -78,4 +86,11 @@ extension MapViewController: UITextFieldDelegate {
 
 extension MapViewController: MKMapViewDelegate {
     
+}
+
+extension MapViewController: MapVMDelegate {
+    func didFetchAnnotations() {
+        mapView.removeAnnotations(mapView.annotations)
+        updateAnnotations()
+    }
 }
