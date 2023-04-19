@@ -11,14 +11,26 @@ import MapKit
 class MapViewController: UIViewController {
     
     private let mapView = MKMapView()
+    private let locationManager = CLLocationManager()
     private var viewModel: MapVM = MapViewModel()
     private var isShowingAlert = false
+    private let kyiv = CLLocationCoordinate2D(latitude: 50.450001, longitude: 30.523333)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewModel()
         setupMap()
         addGestureRecognizer()
+        setupLocation()
+    }
+    
+    private func setupLocation() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        mapView.showsUserLocation = true
+        mapView.setCenter(locationManager.location?.coordinate ?? kyiv, animated: true)
     }
     
     private func setupViewModel() {
@@ -53,17 +65,17 @@ class MapViewController: UIViewController {
                             inputPlaceholder: "Your note (max 30 ch)",
                             delegate: self,
                             inputKeyboardType: .default, cancelHandler: {[weak self]  _ in
-                                self?.isShowingAlert = false
-                            }, actionHandler:
+                self?.isShowingAlert = false
+            }, actionHandler:
                                 { [weak self] (input: String?) in
-                                    guard let input = input, !input.isEmpty else {
-                                        self?.isShowingAlert = false
-                                        return
-                                    }
-                                    // add to vm
-                                    self?.mapView.addAnnotation(PointAnnotation(coordinate: coordinate, title: input))
-                                    self?.isShowingAlert = false
-                                })
+                guard let input = input, !input.isEmpty else {
+                    self?.isShowingAlert = false
+                    return
+                }
+                // add to vm
+                self?.mapView.addAnnotation(PointAnnotation(coordinate: coordinate, title: input))
+                self?.isShowingAlert = false
+            })
         }
     }
     
@@ -84,8 +96,10 @@ extension MapViewController: UITextFieldDelegate {
     }
 }
 
-extension MapViewController: MKMapViewDelegate {
-    
+extension MapViewController: MKMapViewDelegate, CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        mapView.setCenter(locations.last?.coordinate ?? kyiv, animated: true)
+    }
 }
 
 extension MapViewController: MapVMDelegate {

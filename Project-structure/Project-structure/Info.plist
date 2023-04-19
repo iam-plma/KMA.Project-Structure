@@ -62,5 +62,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>&quot;Your location is required for map usage convenience&quot;</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>&quot;Your location is required for map usage convenience&quot;</string>
 </dict>
 </plist>

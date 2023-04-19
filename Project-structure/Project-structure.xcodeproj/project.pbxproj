@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C00825F29C3134800C36B96 /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C00825E29C3134800C36B96 /* StatisticsViewModel.swift */; };
+		0C00826229C3138900C36B96 /* PastData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C00826129C3138900C36B96 /* PastData.json */; };
+		0C00826629C3149800C36B96 /* PastWalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C00826529C3149800C36B96 /* PastWalk.swift */; };
+		0C00826A29C3169200C36B96 /* WalkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C00826829C3169200C36B96 /* WalkTableViewCell.swift */; };
+		0C00826B29C3169200C36B96 /* WalkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C00826929C3169200C36B96 /* WalkTableViewCell.xib */; };
 		0C4711EA29AF993A00C3EB0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4711E929AF993A00C3EB0A /* AppDelegate.swift */; };
 		0C4711EC29AF993A00C3EB0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4711EB29AF993A00C3EB0A /* SceneDelegate.swift */; };
 		0C4711EE29AF993A00C3EB0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4711ED29AF993A00C3EB0A /* ViewController.swift */; };
@@ -38,6 +43,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C00825E29C3134800C36B96 /* StatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModel.swift; sourceTree = "<group>"; };
+		0C00826129C3138900C36B96 /* PastData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PastData.json; sourceTree = "<group>"; };
+		0C00826529C3149800C36B96 /* PastWalk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastWalk.swift; sourceTree = "<group>"; };
+		0C00826829C3169200C36B96 /* WalkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkTableViewCell.swift; sourceTree = "<group>"; };
+		0C00826929C3169200C36B96 /* WalkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalkTableViewCell.xib; sourceTree = "<group>"; };
 		0C4711E629AF993A00C3EB0A /* Project-structure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project-structure.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C4711E929AF993A00C3EB0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C4711EB29AF993A00C3EB0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +103,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		0C00825D29C3133300C36B96 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0C00826829C3169200C36B96 /* WalkTableViewCell.swift */,
+				0C00826929C3169200C36B96 /* WalkTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		0C4711DD29AF993A00C3EB0A = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +144,7 @@
 				CFC28F3029B3FFC0008E5DBE /* GoogleService-Info.plist */,
 				0C47129729B0A19800C3EB0A /* Coordinates.json */,
 				0C4712DD29B113ED00C3EB0A /* Routes.json */,
+				0C00826129C3138900C36B96 /* PastData.json */,
 			);
 			path = "Project-structure";
 			sourceTree = "<group>";
@@ -182,7 +202,9 @@
 		0C47127029AFA0B300C3EB0A /* StatisticsScene */ = {
 			isa = PBXGroup;
 			children = (
+				0C00825D29C3133300C36B96 /* TableViewCell */,
 				0C47127529AFA0EB00C3EB0A /* StatisticsViewController.swift */,
+				0C00825E29C3134800C36B96 /* StatisticsViewModel.swift */,
 			);
 			path = StatisticsScene;
 			sourceTree = "<group>";
@@ -211,6 +233,7 @@
 			children = (
 				0C47129329B0A06D00C3EB0A /* MapPoint.swift */,
 				0C4712DA29B113C300C3EB0A /* Route.swift */,
+				0C00826529C3149800C36B96 /* PastWalk.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -312,7 +335,9 @@
 			files = (
 				0C4711F629AF993D00C3EB0A /* LaunchScreen.storyboard in Resources */,
 				CFC28F3129B3FFC0008E5DBE /* GoogleService-Info.plist in Resources */,
+				0C00826229C3138900C36B96 /* PastData.json in Resources */,
 				0C4712DE29B113ED00C3EB0A /* Routes.json in Resources */,
+				0C00826B29C3169200C36B96 /* WalkTableViewCell.xib in Resources */,
 				0C4711F329AF993D00C3EB0A /* Assets.xcassets in Resources */,
 				0C4711F129AF993A00C3EB0A /* Main.storyboard in Resources */,
 				0C47129829B0A19800C3EB0A /* Coordinates.json in Resources */,
@@ -393,16 +418,19 @@
 				0C47127229AFA0C500C3EB0A /* WalkViewController.swift in Sources */,
 				0C4712D829B1138E00C3EB0A /* GuidedViewModel.swift in Sources */,
 				0C4711EE29AF993A00C3EB0A /* ViewController.swift in Sources */,
+				0C00826A29C3169200C36B96 /* WalkTableViewCell.swift in Sources */,
 				0C4712E729B119E700C3EB0A /* UIView+.swift in Sources */,
 				0C4712CB29B0F20800C3EB0A /* WalkViewModel.swift in Sources */,
 				0C47127629AFA0EB00C3EB0A /* StatisticsViewController.swift in Sources */,
 				0C4712A029B0A51700C3EB0A /* PointAnnotationView.swift in Sources */,
 				0C4712D429B0FBF400C3EB0A /* GuidedViewController.swift in Sources */,
 				0C4712A329B0A6A900C3EB0A /* UIColor+.swift in Sources */,
+				0C00826629C3149800C36B96 /* PastWalk.swift in Sources */,
 				0C4712E329B1172800C3EB0A /* RouteTableViewCell.swift in Sources */,
 				0C4712DB29B113C300C3EB0A /* Route.swift in Sources */,
 				0C4711EA29AF993A00C3EB0A /* AppDelegate.swift in Sources */,
 				0C4711EC29AF993A00C3EB0A /* SceneDelegate.swift in Sources */,
+				0C00825F29C3134800C36B96 /* StatisticsViewModel.swift in Sources */,
 				0C4712D029B0FBE800C3EB0A /* QuickstartViewController.swift in Sources */,
 				0C47128A29AFAB1A00C3EB0A /* MapViewController.swift in Sources */,
 				0C4712A629B0A7F300C3EB0A /* UIViewController+.swift in Sources */,
